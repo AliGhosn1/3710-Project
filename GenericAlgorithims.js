@@ -14,12 +14,12 @@ export const BaseGenericAlgorithim = (randomChoiceList, iterations) => {
     }
 
     const endTime = new Date().getTime();
-
-    return{
-        initialScore: initialScore,
-        finalScore: EvaluateAverageScoreOfPopulation(randomChoiceList, population),
-        time: endTime - startTime
-    }
+    
+    return (
+`interations: ${iterations},
+initialScore: ${initialScore},
+finalScore: ${EvaluateAverageScoreOfPopulation(randomChoiceList, population)},
+time: ${endTime - startTime}ms`);
 }
 
 const ImprovePopulation = (population, randomChoiceList) => {

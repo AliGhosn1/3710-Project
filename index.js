@@ -1,7 +1,16 @@
 import { GetRandomChoices } from "./randomChoice.js";
 import { BaseGenericAlgorithim } from "./GenericAlgorithims.js";
+import { GetDateForFileName } from "./general.js";
+import fs from 'fs';
 
 const randomChoiceList = GetRandomChoices();
-const results = BaseGenericAlgorithim(randomChoiceList, 1000000);
+const BaseGenericAlgorithimResults = BaseGenericAlgorithim(randomChoiceList, 400);
 
-console.log(results);
+const outputString = 
+"BaseGenericAlgorithim\n" + 
+"---------------------\n" +
+BaseGenericAlgorithimResults;
+
+fs.writeFile(`output-${GetDateForFileName()}.txt`, outputString, (err) => {
+    if (err) throw err;
+});
