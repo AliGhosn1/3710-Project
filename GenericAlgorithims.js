@@ -24,8 +24,8 @@ const ImprovePopulation = (population, randomChoiceList, countOfMembersToFormNex
         population = ShuffleTwoElements(population, eliteness);
     }
 
-    const populationLength = population.length;
-    for(let i = populationLength; i < populationLength * 2 ; i++) {
+    let populationStartingLength = population.length;
+    for(let i = populationStartingLength; i < 10 ; i++) {
         population[i] = GetRandomChoice();
     }
     
