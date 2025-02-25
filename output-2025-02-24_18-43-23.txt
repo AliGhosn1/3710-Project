@@ -1,6 +1,0 @@
-BaseGenericAlgorithim
----------------------
-interations: 400,
-initialScore: -85.77000000000001,
-finalScore: -42.72,
-time: 8ms
